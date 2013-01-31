@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+    <title>Gathering UP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<!-- Le styles -->
+    <link href="Gathering%20UP_files/bootstrap.css" rel="stylesheet">
+        <style type="text/css">
+          body {
+            padding-top: 60px;
+          }
+
+        </style>        
+    <link href="Gathering%20UP_files/bootstrap-responsive.css" rel="stylesheet">
+<link rel="Stylesheet" type="text/css" href="Gathering%20UP_files/chosen.css">
+<link rel="Stylesheet" type="text/css" href="Gathering%20UP_files/search.css">
+<link rel="Stylesheet" type="text/css" href="Gathering%20UP_files/home.css">
+<link rel="stylesheet" href="Gathering%20UP_files/jquery-ui.css">
+
+<!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://gatheringup.com/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://gatheringup.com/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://gatheringup.com/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://gatheringup.com/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="http://gatheringup.com/favicon.ico">
+    <link href="Gathering%20UP_files/css.css" rel="stylesheet" type="text/css">
+    <link href="Gathering%20UP_files/css_002.css" rel="stylesheet" type="text/css">
+    <link href="Gathering%20UP_files/styles.css" rel="stylesheet">    
+
+<!-- 
+<link type="text/css" href="/css/humanity/jquery-ui-1.8.21.custom.css" rel="Stylesheet" />	
+<link rel="Stylesheet" type="text/css" href="/css/header.css" />
+<link rel="Stylesheet" type="text/css" href="/css/home.css" />
+ --> 	
+<link rel="Stylesheet" type="text/css" href="Gathering%20UP_files/timepicker.css">
+<link rel="Stylesheet" type="text/css" href="Gathering%20UP_files/fullcalendar.css">
+  <script type="text/javascript" src="Gathering%20UP_files/jquery-1.js"></script>
+  <script type="text/javascript" src="Gathering%20UP_files/jquery-ui-1.js"></script>
+  <script type="text/javascript" src="Gathering%20UP_files/jquery-ui-timepicker-addon.js"></script>
+  <script type="text/javascript" src="Gathering%20UP_files/fullcalendar.js"></script>
+  <script type="text/javascript" src="Gathering%20UP_files/underscore-min.js"></script>
+  <script type="text/javascript" src="Gathering%20UP_files/chosen.js"></script>
+  <script type="text/javascript" src="Gathering%20UP_files/gatheringup-emaildialog.js">	</script>
+  <script type="text/javascript" src="Gathering%20UP_files/gatheringup-home.js"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper"> <!-- Wrapper -->   
+<!-- Header + Navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="top-stripe"></div>
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="http://gatheringup.com/">GatheringUP</a>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li><a href="http://gatheringup.com/Dining">Dining</a></li>
+                  <li><a href="http://gatheringup.com/Places">Places</a></li>
+                  <li><a href="http://gatheringup.com/Events">Events</a></li>
+                  <li><a href="http://gatheringup.com/datebook">Datebook</a></li>
+                  <li><a id="note_on" class="dropdown-toggle" data-toggle="dropdown"  href="">O</a>
+                      <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
+                          <div class="eventbox">
+                            <b>Invites (4)</b>
+                          </div>                        
+                        <div style="max-height: 21em; overflow-y: auto;" class="note_box">
+                            <div class="breakline_note"></div>
+                            <div class="roundedbox">
+                                <div class="imagebox">
+                                  <img src="http://graph.facebook.com/kenneth.su.505/picture" title="Kenneth Su" width="37"><br>
+                                </div>
+                                <div class="note">one one has invited you to join gathering(<a href="javascript:void(0);" onclick="loadurl('/datebook/viewinvite?idinvite=239')">ERAWAN THAI CUISINE </a>)<br>
+                                  <a href="http://gatheringup.com/invitation/accept?idinvite=239">Accept</a> | 
+                                  <a href="http://gatheringup.com/invitation/decline?idinvite=239">Decline</a>
+                                </div> 
+                            </div>
+                            <div class="breakline_note"></div>
+                              <div class="roundedbox">
+                                  <div class="imagebox">
+                                  <img src="http://graph.facebook.com/kenneth.su.505/picture" title="Kenneth Su" width="37"><br>
+                                  </div>
+                                  <div class="note">one one has invited you to join gathering(<a href="javascript:void(0);" onclick="loadurl('/datebook/viewinvite?idinvite=239')">ERAWAN THAI CUISINE </a>)<br>
+                                    <a href="http://gatheringup.com/invitation/accept?idinvite=239">Accept</a> | 
+                                    <a href="http://gatheringup.com/invitation/decline?idinvite=239">Decline</a>
+                                  </div> 
+                              </div>
+                            <div class="breakline_note"></div>
+                            <div class="roundedbox">
+                                <div class="imagebox">
+                                  <img src="http://graph.facebook.com/kenneth.su.505/picture" title="Kenneth Su" width="37"><br>
+                                </div>
+                                <div class="note">one one has invited you to join gathering(<a href="javascript:void(0);" onclick="loadurl('/datebook/viewinvite?idinvite=239')">ERAWAN THAI CUISINE </a>)<br>
+                                  <a href="http://gatheringup.com/invitation/accept?idinvite=239">Accept</a> | 
+                                  <a href="http://gatheringup.com/invitation/decline?idinvite=239">Decline</a>
+                                </div> 
+                            </div>
+                            <div class="breakline_note"></div>
+                            <div class="roundedbox">
+                                <div class="imagebox">
+                                  <img src="http://graph.facebook.com/kenneth.su.505/picture" title="Kenneth Su" width="37"><br>
+                                </div>
+                                <div class="note">one one has invited you to join gathering(<a href="javascript:void(0);" onclick="loadurl('/datebook/viewinvite?idinvite=239')">ERAWAN THAI CUISINE </a>)<br>
+                                  <a href="http://gatheringup.com/invitation/accept?idinvite=239">Accept</a> | 
+                                  <a href="http://gatheringup.com/invitation/decline?idinvite=239">Decline</a>
+                                </div> 
+                            </div>                                                          
+                            </div>                                    
+                        </ul>
+                  </li>
+                </ul>
+                      <div class="dropdown">
+               		       <form style="color:white;" class="navbar-form pull-right">Hello &nbsp;
+                            <a class="dropdown-toggle " type="button" data-toggle="dropdown" href="#">one one</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                      <!-- <li><a href="logOut.html">Settings</a></li> -->                    
+                      <li style="text-align: center"><a href="http://gatheringup.com/user/logout">Log Out</a></li>          
+                    </ul>
+                  </form>
+                </div>
+              </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div><script type="text/javascript">
+
+window.friends = {"4":{"name":"five","email":"5@1.com"},"3":{"name":"four","email":"4@1.com"},"2":{"name":"one","email":"1@1.com"},"1":{"name":"three","email":"3@1.com"},"0":{"name":"two","email":"2@1.com"}};
+$(document).ready(function() {
+	
+	var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+	
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay'
+		},
+		editable: false, 
+		selectable: true,
+		timeFormat: 'h:mm TT',
+		unselectAuto: true,
+		events: [{
+title: 'Bern Dibner Library of Science and Technology',
+start: new Date(2013, 0, 29, 0, 0),
+end: new Date(2013, 0, 29, 0, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Morning Fitness at Fort Tryon Park',
+start: new Date(2013, 0, 29, 7, 30),
+end: new Date(2013, 0, 29, 8, 30),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'American Tract Society Building',
+start: new Date(2013, 0, 29, 8, 0),
+end: new Date(2013, 0, 29, 9, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'PIZZA HUT',
+start: new Date(2013, 0, 29, 8, 0),
+end: new Date(2013, 0, 29, 10, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Wave Hill Winter Workspace: Nature Through Glass: Snow-Globe Jars',
+start: new Date(2013, 0, 29, 10, 0),
+end: new Date(2013, 0, 29, 13, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Tropical Paradise at The New York Botanical Garden',
+start: new Date(2013, 0, 29, 10, 0),
+end: new Date(2013, 0, 29, 14, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Tropical Paradise at The New York Botanical Garden',
+start: new Date(2013, 0, 29, 10, 0),
+end: new Date(2013, 0, 29, 2, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Tropical Paradise at The New York Botanical Garden',
+start: new Date(2013, 0, 29, 10, 0),
+end: new Date(2013, 0, 29, 2, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Wave Hill Winter Workspace: Nature Through Glass: Snow-Globe Jars',
+start: new Date(2013, 0, 29, 10, 0),
+end: new Date(2013, 0, 29, 1, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Arts,  Culture & Fun: Soul Food Junkies Film Screening',
+start: new Date(2013, 0, 29, 10, 30),
+end: new Date(2013, 0, 29, 12, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'American Tract Society Building',
+start: new Date(2013, 0, 30, 0, 0),
+end: new Date(2013, 0, 30, 0, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'American Tract Society Building',
+start: new Date(2013, 0, 30, 0, 0),
+end: new Date(2013, 0, 30, 0, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Mount Carmel - Saint Benedicta School',
+start: new Date(2013, 0, 30, 0, 0),
+end: new Date(2013, 0, 30, 0, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'ELITE PASTRIES CAFE',
+start: new Date(2013, 0, 30, 0, 0),
+end: new Date(2013, 0, 30, 0, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'ERAWAN THAI CUISINE',
+start: new Date(2013, 0, 30, 0, 0),
+end: new Date(2013, 0, 30, 0, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'The Wild Garden: Discovering Central Park Woodlands Exhibit',
+start: new Date(2013, 0, 30, 10, 0),
+end: new Date(2013, 0, 30, 17, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Woodland Discovery Kit in Central Park',
+start: new Date(2013, 0, 30, 10, 0),
+end: new Date(2013, 0, 30, 17, 0),
+color: '#00abdc',
+allDay: false
+},
+{
+title: 'Greenbelt Peepers',
+start: new Date(2013, 0, 30, 11, 0),
+end: new Date(2013, 0, 30, 11, 30),
+color: '#00abdc',
+allDay: false
+}
+		]
+	});
+	
+});
+</script>
+
+<!--
+Underscore is stripping out img's for select options for some reason.
+<img src="/images/gnome_stock_person.png" height="20"> 
+					<img src="http://graph.facebook.com/<%=one.id %>/picture" height="20">-->
+<script type="text/html" id="eventdetails">
+          <div class="event_info">
+            <h3><%= event.summary %></h3>
+            <dl class="dl-horizontal">
+              <dt>Location:</dt>
+              <dd><%= event.location %>, <%= event.city %>, <%= event.state %></dd>
+              <dt>Date:</dt>
+              <dd><%= event.startdate %></dd>
+              <dt>Time:</dt>
+              <dd><%= event.starttime %> - <%= event.endtime %></dd>
+            </dl>
+            <p><% if(event.description){ print(event.description); } %></p>        
+          </div>
+          <div class="blue_bar"></div>
+                <form accept-charset="UTF-8" action="" method="POST">
+                    <textarea class="span8" id="new_message" name="new_message"
+                    placeholder="Type in your message" rows="5"></textarea>                    
+                    <button class="btn btn-blue" type="submit">Post New Message</button>
+                    <div style="margin-top: 12px;" class="breakline_msg"></div>                     
+                </form>            
+
+          <div class="message_area">
+			<% _.each(messages, function(one) { %>
+                <div class="message_entry">
+				<% if(one.screenname){ 		%>
+                    <img class="img-polaroid thumbnail_profile" src="http://graph.facebook.com/<%= one.screenname %>/picture" alt="thumbnail"> 
+      			<%  }else if(one.oauth_uid) { %> 
+                    <img class="img-polaroid thumbnail_profile" src="http://graph.facebook.com/<%= one.oauth_uid %>/picture" alt="thumbnail"> 
+      			<%  }else { %> 
+                    <img class="img-polaroid thumbnail_profile" src="/images/person.png" alt="thumbnail"> 
+				<%  } %>
+                    <div class="text_entry">
+                    <h4><%= one.firstname %> <%= one.lastname %></h4>
+                    <p>,%= one.message %> </p>
+                    </div> 
+                    <div class="breakline_msg"></div>  
+                </div>
+			<% }); %>
+      
+          </div>  
+
+</script>
+<script type="text/html" id="bookmarks">
+
+                  <table class="table table-hover table-bordered table-condensed">
+                    <tbody>
+			<% _.each(bookmarks, function(one) { %>
+				<%   // Used for modal events creation. 
+				one.summary=one.destname;
+				one.city=one.county;
+				var onejson = JSON.stringify(one);
+				%>
+
+                      <tr id="<%=one.id%>">
+                        <td>
+                          <div class="eventbox"  id="<%=one.id%>pop"  data-trigger="hover" >
+<button type="button" class="close" onclick='deletebookmarks("<%=one.bookmarktype%>","<%=one.id%>")'>&times;</button>
+<a href="javascript:void(0);" onclick='opencreateevent(<%=onejson%>,1)' class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+							<a href="#" onclick='opencreateevent(<%=onejson%>,1)'><%=one.destname%></a><br>
+							<% if(one.startdate){ 		%>
+                            	<%=one.startdate%> <br>
+							<%  } %>
+							<%=one.county%>, <%=one.state%>
+                          </div>
+<%
+//                          var popover = '<div id="'+one.id+'_pop" style><a href="#">'+one.destname+'</a><br>'+one.county+', '+one.state+'</div>';
+//var popover ="test";
+//$("#"+one.id+"pop").popover('show');
+%>
+                        </td>
+                      </tr> 
+			<% }); %>
+                     </tbody>    
+                  </table>
+</script>
+
+<script type="text/html" id="createeventtemplate">
+<!--Create Event Modal-->
+    <div id="CreateEvent" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div id="modal-event">
+       <div class="modal-header">
+        <button type="button" id="done_button2" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 id="myModalLabel">Create an Event</h2>
+        <div id="CreateEventErrors"></div>
+       </div> 
+        <div class="modal-body" style="overflow: inherit">
+            <div class="eventForm">
+              <input class="squareCorners" type="text" placeholder="Event Title" name="summary" id="summary" value="<%= activity.summary%>" style="width:516px;">
+              <input class="squareCorners" type="text" placeholder="Location (Optional)" name="location" id="location" value="<%=activity.location%>" style="width:30%;" >
+              <input class="squareCorners" type="text" placeholder="City (Optional)" name="city" value="<%=activity.city%>" id="city" style="width:30%;">
+              <input class="squareCorners" type="text" placeholder="State" name="state" value="<%=activity.state%>" id="state" style="text-align:center;width:10%;float:right;">
+              <input class="squareCorners" type="text" placeholder="Event Date" name="startdate" value="<%=activity.startdate%>" id="datepicker3" style="width:516px;">             
+              <input class="squareCorners" type="text" placeholder="Start Time (Optional)" name="starttime" value="<%=activity.starttime%>" id="timepicker3">
+              <input class="squareCorners" type="text" placeholder="End Time (Optional)" name="endtime" value="<%=activity.endtime%>" id="timepicker2" ">
+      <div class="breakline"></div>            		
+      <select data-placeholder="Invite friends to your event" class="chzn-select" multiple name="friendadd" id="friendadd" style="width:350px; font-family:ubuntu;">
+			            	    <option value="5@1.com"> five</option> 		
+      					            	    <option value="4@1.com"> four</option> 		
+      					            	    <option value="1@1.com"> one</option> 		
+      					            	    <option value="3@1.com"> three</option> 		
+      					            	    <option value="2@1.com"> two</option> 		
+      							</select><br>
+          <!--               <input class="squareCorners" type="text" placeholder="Invite your friends">
+ -->
+
+              <a id="add_button" data-target="#add_emailModal" style="cursor:pointer;" data-toggle="modal">Via Email</a>
+              <textarea style=" width: 516px; border-radius: 0px;" rows="4" id="description" type="text" placeholder="Details"><%=activity.description%></textarea>
+            </div>
+		<input type="hidden" class="idbusiness" name="idbusiness" value="<%=activity.idbusiness%>">
+		<input type="hidden" class="idplace" name="idplace" value="<%=activity.idplace%>">
+<!-- <input type="button" value="Create Event!" onclick="createevent()" /> -->
+    <button value="Create Event!" onclick="createevent()" class="btn btn-blue btn-large" style="width:529px;" >Create Event!</button>
+       </div>
+       <div class="modal-footer" > 
+      </div>
+</div>
+<!--Side Bar Info-->    
+
+    <div id="emailModal" >
+      <div class="modal-header">
+        <h4 style="text-align:center;">Add Friend Via Email</h4>
+          <div class="breakline"></div>
+      </div>
+<div style="text-align:center;color:red;" id="emailerrormsg"></div>
+      <div class="modal-body">
+          <input class="squareCorners" type="text" id="emailfullname" value="" placeholder="Add Name"><span id='erremailname'></span>
+          <input class="squareCorners" type="text" id="emailaddress" value="" placeholder="Add Email"><span id='erremailaddress'></span>
+          <button style="padding:4px 35px 4px 35px;" class="btn btn-blue" onclick="addemail()">Add Friend</button>  
+          <button id="done_button" style="float:right;" class="btn btn-blue">Done</button>   
+        <div class="friends_module">
+			          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("5@1.com")'>&times;</button>
+            <p>five<br>5@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("4@1.com")'>&times;</button>
+            <p>four<br>4@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("1@1.com")'>&times;</button>
+            <p>one<br>1@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("3@1.com")'>&times;</button>
+            <p>three<br>3@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("2@1.com")'>&times;</button>
+            <p>two<br>2@1.com</p>
+          </div>
+      		 
+        </div>
+      </div>
+    </div> 
+
+    </div>   
+</script>
+
+
+    <!-- Your Events + Buttons -->      
+    <div class="container">
+      <div class="row">
+        <div class="datebook span4">
+<!-- <input type="button" value="Create personal event" id="createevent" onclick="createpersonaleventform('/activity/createactivity')" > -->	
+        <button style="width:70%;float:left;" href="#CreateEvent" data-toggle="modal" role="button" class="btn btn-large btn-blue" type="submit">Create Event!
+        </button>
+        <button id="calendarButton" class="btn btn-large btn-blue" style="height: 100%;">&nbsp;
+        </button>
+
+          <ul class="nav nav-pills" id="nav-pill_box">
+            <li class="tab-pane pill_width active">
+              <a id="Your_event" href="#home" data-toggle="tab"><h4 style="font-size: 1.17em;">Your Events</h4></a>
+            </li>
+<!--           <li class="pill_width">
+            <a id="Your_bookmark" href="#profile"  data-toggle="tab"><h4 style="font-size: 1.17em;">Your Bookmarks</h4>
+            </a>
+            </li> --> 
+             <li class="tab-pane pill_bookmarks dropdown">
+            <a id="Your_bookmark" class="dropdown-toggle" data-toggle="dropdown" href="#">
+           <h4 style="font-size: 1.17em;margin-left: 13px;text-align: center;">Bookmarks 
+<b class="caret"></b></h4>
+            </a>
+<ul class="nav nav-tab dropdown-menu bookmark_drop" style="  border-radius: 0px !important; text-align: center; min-width: 115px;margin-top: 0px; margin-right: 0px;right: 2px;">
+<!-- links -->
+<li><a data-toggle="tab" href="#bookmarkbusiness" onclick="loadbusinessbookmark('business')">Dining</a></li>
+<li><a data-toggle="tab" href="#bookmarkplace" onclick="loadplacebookmark('places')">Places</a></li>
+<li><a data-toggle="tab" href="#bookmarkevents" onclick="loadeventsbookmark('events')">Events</a></li>
+</ul>
+</li>
+          </ul>
+
+<div class="tab-content">
+        <div class="tab-pane active" id="home">
+              <div class="EventListing">
+              
+									<div class="leftbox">
+										</div>
+										<table class="table table-bordered table-hover table-condensed">
+                    <tbody>
+						
+								        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(210)">
+									Bern Dibner Library of Science and Technology</a> 
+									<span id="id210"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									5 Metrotech Ctr									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(213)">
+									Morning Fitness at Fort Tryon Park</a> 
+									<span id="id213"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									Heather Garden (in Fort Tryon Park)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(219)">
+									American Tract Society Building</a> 
+									<span id="id219"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									11 Spruce St									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(220)">
+									PIZZA HUT</a> 
+									<span id="id220"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									215-45     NORTHERN BLVD									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(207)">
+									Wave Hill Winter Workspace: Nature Through Glass: Snow-Globe Jars</a> 
+									<span id="id207"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									Glyndor Gallery (in Wave Hill)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(208)">
+									Tropical Paradise at The New York Botanical Garden</a> 
+									<span id="id208"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									The New York Botanical Garden									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(211)">
+									Tropical Paradise at The New York Botanical Garden</a> 
+									<span id="id211"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									The New York Botanical Garden									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(212)">
+									Tropical Paradise at The New York Botanical Garden</a> 
+									<span id="id212"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									The New York Botanical Garden									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(214)">
+									Wave Hill Winter Workspace: Nature Through Glass: Snow-Globe Jars</a> 
+									<span id="id214"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									Glyndor Gallery (in Wave Hill)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(209)">
+									Arts,  Culture &amp; Fun: Soul Food Junkies Film Screening</a> 
+									<span id="id209"></span>									<br>
+									Tuesday January 29, 2013	<br>
+									Herbert Von King Cultural Arts Center (in Herbert Von King Park)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(215)">
+									American Tract Society Building</a> 
+									<span id="id215"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									11 Spruce St									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(216)">
+									American Tract Society Building</a> 
+									<span id="id216"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									11 Spruce St									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(217)">
+									Mount Carmel - Saint Benedicta School</a> 
+									<span id="id217"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									283 Clove Rd									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(218)">
+									ELITE PASTRIES CAFE</a> 
+									<span id="id218"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									47-36 BELL BOULEVARD									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(221)">
+									ERAWAN THAI CUISINE</a> 
+									<span id="id221"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									42-31 BELL BOULEVARD									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(205)">
+									The Wild Garden: Discovering Central Park Woodlands Exhibit</a> 
+									<span id="id205"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									Charles A. Dana Discovery Center (in Central Park)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(206)">
+									Woodland Discovery Kit in Central Park</a> 
+									<span id="id206"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									Charles A. Dana Discovery Center (in Central Park)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+									        	              <tr>
+        		    	            <td>
+									<div class="eventbox">
+									<a href="javascript:void(0);" onclick="loadeventdetail(222)">
+									Greenbelt Peepers</a> 
+									<span id="id222"></span>									<br>
+									Wednesday January 30, 2013	<br>
+									Greenbelt Nature Center (in Blood Root Valley)									</div>
+						            </td>
+                      				</tr> 
+									
+									<!-- below is used for formating only -->
+							                     </tbody>    
+                  </table>
+						
+              </div>
+            </div>
+        <div class="tab-pane" id="bookmarkplace">
+        <div class="BookmarkTitles">Bookmarked Places</div>
+            <div class="yourBookmarks">
+
+<!-- TEMP -->
+
+<table class="table-hover table table-bordered">
+                    <tbody>
+      
+        
+
+                      <tr id="1906036">
+                        <td>
+                          <div class="eventbox" id="1906036pop" data-trigger="hover" data-original-title="">
+<button type="button" class="close" onclick="deletebookmarks(&quot;places&quot;,&quot;1906036&quot;)">×</button>
+<a href="javascript:void(0);" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1906036&quot;,&quot;destname&quot;:&quot;American Tract Society Building&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:&quot;11 Spruce St&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;10038-1520&quot;,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.71149140000000&quot;,&quot;longitude&quot;:&quot;-74.00569510000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;American Tract Society Building&quot;,&quot;city&quot;:&quot;New York&quot;},1)" class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+              <a href="#" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1906036&quot;,&quot;destname&quot;:&quot;American Tract Society Building&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:&quot;11 Spruce St&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;10038-1520&quot;,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.71149140000000&quot;,&quot;longitude&quot;:&quot;-74.00569510000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;American Tract Society Building&quot;,&quot;city&quot;:&quot;New York&quot;},1)">American Tract Society Building</a><br>
+              
+              New York, NY
+                          </div>
+
+                        </td>
+                      </tr> 
+      
+        
+
+                      <tr id="1926742">
+                        <td>
+                          <div class="eventbox" id="1926742pop" data-trigger="hover" data-original-title="">
+<button type="button" class="close" onclick="deletebookmarks(&quot;places&quot;,&quot;1926742&quot;)">×</button>
+<a href="javascript:void(0);" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1926742&quot;,&quot;destname&quot;:&quot;Merkin Concert Hall&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:&quot;160 W 67th St&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;10023-5916&quot;,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.77500000000000&quot;,&quot;longitude&quot;:&quot;-73.98333330000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Merkin Concert Hall&quot;,&quot;city&quot;:&quot;New York&quot;},1)" class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+              <a href="#" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1926742&quot;,&quot;destname&quot;:&quot;Merkin Concert Hall&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:&quot;160 W 67th St&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;10023-5916&quot;,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.77500000000000&quot;,&quot;longitude&quot;:&quot;-73.98333330000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Merkin Concert Hall&quot;,&quot;city&quot;:&quot;New York&quot;},1)">Merkin Concert Hall</a><br>
+              
+              New York, NY
+                          </div>
+
+                        </td>
+                      </tr> 
+      
+        
+
+                      <tr id="1922588">
+                        <td>
+                          <div class="eventbox" id="1922588pop" data-trigger="hover" data-original-title="">
+<button type="button" class="close" onclick="deletebookmarks(&quot;places&quot;,&quot;1922588&quot;)">×</button>
+<a href="javascript:void(0);" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1922588&quot;,&quot;destname&quot;:&quot;Mount Carmel - Saint Benedicta School&quot;,&quot;desttype&quot;:&quot;School&quot;,&quot;location&quot;:&quot;283 Clove Rd&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;10310-1906&quot;,&quot;county&quot;:&quot;Staten Island&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.63333330000000&quot;,&quot;longitude&quot;:&quot;-74.12555560000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Mount Carmel - Saint Benedicta School&quot;,&quot;city&quot;:&quot;Staten Island&quot;},1)" class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+              <a href="#" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1922588&quot;,&quot;destname&quot;:&quot;Mount Carmel - Saint Benedicta School&quot;,&quot;desttype&quot;:&quot;School&quot;,&quot;location&quot;:&quot;283 Clove Rd&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;10310-1906&quot;,&quot;county&quot;:&quot;Staten Island&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.63333330000000&quot;,&quot;longitude&quot;:&quot;-74.12555560000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Mount Carmel - Saint Benedicta School&quot;,&quot;city&quot;:&quot;Staten Island&quot;},1)">Mount Carmel - Saint Benedicta School</a><br>
+              
+              Staten Island, NY
+                          </div>
+
+                        </td>
+                      </tr> 
+      
+        
+
+                      <tr id="1937358">
+                        <td>
+                          <div class="eventbox" id="1937358pop" data-trigger="hover" data-original-title="">
+<button type="button" class="close" onclick="deletebookmarks(&quot;places&quot;,&quot;1937358&quot;)">×</button>
+<a href="javascript:void(0);" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1937358&quot;,&quot;destname&quot;:&quot;Brownsville Boys Club&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:&quot;1547 Linden Blvd&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;11212-6931&quot;,&quot;county&quot;:&quot;Brooklyn&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.65555560000000&quot;,&quot;longitude&quot;:&quot;-73.90305560000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Brownsville Boys Club&quot;,&quot;city&quot;:&quot;Brooklyn&quot;},1)" class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+              <a href="#" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;1937358&quot;,&quot;destname&quot;:&quot;Brownsville Boys Club&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:&quot;1547 Linden Blvd&quot;,&quot;phone&quot;:null,&quot;zipcode&quot;:&quot;11212-6931&quot;,&quot;county&quot;:&quot;Brooklyn&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.65555560000000&quot;,&quot;longitude&quot;:&quot;-73.90305560000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Brownsville Boys Club&quot;,&quot;city&quot;:&quot;Brooklyn&quot;},1)">Brownsville Boys Club</a><br>
+              
+              Brooklyn, NY
+                          </div>
+
+                        </td>
+                      </tr> 
+      
+        
+
+                      <tr id="867950">
+                        <td>
+                          <div class="eventbox" id="867950pop" data-trigger="hover" data-original-title="">
+<button type="button" class="close" onclick="deletebookmarks(&quot;places&quot;,&quot;867950&quot;)">×</button>
+<a href="javascript:void(0);" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;867950&quot;,&quot;destname&quot;:&quot;Butler Library&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:null,&quot;phone&quot;:null,&quot;zipcode&quot;:null,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.80648970000000&quot;,&quot;longitude&quot;:&quot;-73.96319370000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Butler Library&quot;,&quot;city&quot;:&quot;New York&quot;},1)" class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+              <a href="#" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;867950&quot;,&quot;destname&quot;:&quot;Butler Library&quot;,&quot;desttype&quot;:&quot;Building&quot;,&quot;location&quot;:null,&quot;phone&quot;:null,&quot;zipcode&quot;:null,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.80648970000000&quot;,&quot;longitude&quot;:&quot;-73.96319370000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Butler Library&quot;,&quot;city&quot;:&quot;New York&quot;},1)">Butler Library</a><br>
+              
+              New York, NY
+                          </div>
+
+                        </td>
+                      </tr> 
+      
+        
+
+                      <tr id="2078153">
+                        <td>
+                          <div class="eventbox" id="2078153pop" data-trigger="hover" data-original-title="">
+<button type="button" class="close" onclick="deletebookmarks(&quot;places&quot;,&quot;2078153&quot;)">×</button>
+<a href="javascript:void(0);" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;2078153&quot;,&quot;destname&quot;:&quot;Father Fagan Square&quot;,&quot;desttype&quot;:&quot;Park&quot;,&quot;location&quot;:null,&quot;phone&quot;:null,&quot;zipcode&quot;:null,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.72666670000000&quot;,&quot;longitude&quot;:&quot;-74.00333330000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Father Fagan Square&quot;,&quot;city&quot;:&quot;New York&quot;},1)" class="pull-right"> <img src="/images/gtk-save.png" width="19"></a>
+              <a href="#" onclick="opencreateevent({&quot;bookmarktype&quot;:&quot;places&quot;,&quot;id&quot;:&quot;2078153&quot;,&quot;destname&quot;:&quot;Father Fagan Square&quot;,&quot;desttype&quot;:&quot;Park&quot;,&quot;location&quot;:null,&quot;phone&quot;:null,&quot;zipcode&quot;:null,&quot;county&quot;:&quot;New York&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;latitude&quot;:&quot;40.72666670000000&quot;,&quot;longitude&quot;:&quot;-74.00333330000000&quot;,&quot;imgdomain&quot;:null,&quot;imgdomainloc&quot;:null,&quot;note&quot;:&quot;&quot;,&quot;summary&quot;:&quot;Father Fagan Square&quot;,&quot;city&quot;:&quot;New York&quot;},1)">Father Fagan Square</a><br>
+              
+              New York, NY
+                          </div>
+
+                        </td>
+                      </tr> 
+      
+                     </tbody>    
+                  </table>
+
+<!-- TEMP -->
+
+            </div>   
+          </div>
+        <div class="tab-pane" id="bookmarkbusiness">
+        <div class="BookmarkTitles">Bookmarked Dining</div>
+            <div class="yourBookmarks">
+            Processing....
+            </div>   
+          </div>
+        <div class="tab-pane" id="bookmarkevents">
+        <div class="BookmarkTitles">Bookmarked Events</div>
+            <div class="yourBookmarks">
+            Processing....
+            </div>   
+          </div>
+        </div>        
+
+
+        </div>
+      <div class="span8" id="grandcentral">
+<div class="fc" id="calendar"><table class="fc-header" style="width:100%"><tbody><tr><td class="fc-header-left"><span class="fc-button fc-button-prev fc-state-default fc-corner-left"><span class="fc-button-inner"><span class="fc-button-content">&nbsp;◄&nbsp;</span><span class="fc-button-effect"><span></span></span></span></span><span class="fc-button fc-button-next fc-state-default fc-corner-right"><span class="fc-button-inner"><span class="fc-button-content">&nbsp;►&nbsp;</span><span class="fc-button-effect"><span></span></span></span></span><span class="fc-header-space"></span><span class="fc-button fc-button-today fc-state-default fc-corner-left fc-corner-right fc-state-disabled"><span class="fc-button-inner"><span class="fc-button-content">today</span><span class="fc-button-effect"><span></span></span></span></span></td><td class="fc-header-center"><span class="fc-header-title"><h2>January 2013</h2></span></td><td class="fc-header-right"><span class="fc-button fc-button-month fc-state-default fc-corner-left fc-state-active"><span class="fc-button-inner"><span class="fc-button-content">month</span><span class="fc-button-effect"><span></span></span></span></span><span class="fc-button fc-button-agendaWeek fc-state-default"><span class="fc-button-inner"><span class="fc-button-content">week</span><span class="fc-button-effect"><span></span></span></span></span><span class="fc-button fc-button-agendaDay fc-state-default fc-corner-right"><span class="fc-button-inner"><span class="fc-button-content">day</span><span class="fc-button-effect"><span></span></span></span></span></td></tr></tbody></table><div class="fc-content" style="position: relative; min-height: 1px;"><div unselectable="on" class="fc-view fc-view-month fc-grid" style="position: relative; -moz-user-select: none;"><table class="fc-border-separate" style="width:100%" cellspacing="0"><thead><tr class="fc-first fc-last"><th style="width: 87px;" class="fc-sun fc-widget-header fc-first">Sun</th><th style="width: 87px;" class="fc-mon fc-widget-header">Mon</th><th style="width: 87px;" class="fc-tue fc-widget-header">Tue</th><th style="width: 87px;" class="fc-wed fc-widget-header">Wed</th><th style="width: 87px;" class="fc-thu fc-widget-header">Thu</th><th style="width: 87px;" class="fc-fri fc-widget-header">Fri</th><th class="fc-sat fc-widget-header fc-last">Sat</th></tr></thead><tbody><tr class="fc-week0 fc-first"><td class="fc-sun fc-widget-content fc-day0 fc-first fc-other-month"><div style="min-height: 73px;"><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day1 fc-other-month"><div><div class="fc-day-number">31</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day2"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day3"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day4"><div><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day5"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day6 fc-last"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week1"><td class="fc-sun fc-widget-content fc-day7 fc-first"><div style="min-height: 72px;"><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day8"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day9"><div><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day10"><div><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day11"><div><div class="fc-day-number">10</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day12"><div><div class="fc-day-number">11</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day13 fc-last"><div><div class="fc-day-number">12</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week2"><td class="fc-sun fc-widget-content fc-day14 fc-first"><div style="min-height: 72px;"><div class="fc-day-number">13</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day15"><div><div class="fc-day-number">14</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day16"><div><div class="fc-day-number">15</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day17"><div><div class="fc-day-number">16</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day18"><div><div class="fc-day-number">17</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day19"><div><div class="fc-day-number">18</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day20 fc-last"><div><div class="fc-day-number">19</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week3"><td class="fc-sun fc-widget-content fc-day21 fc-first"><div style="min-height: 72px;"><div class="fc-day-number">20</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day22"><div><div class="fc-day-number">21</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day23"><div><div class="fc-day-number">22</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day24"><div><div class="fc-day-number">23</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day25"><div><div class="fc-day-number">24</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day26"><div><div class="fc-day-number">25</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day27 fc-last"><div><div class="fc-day-number">26</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week4"><td class="fc-sun fc-widget-content fc-day28 fc-first"><div style="min-height: 72px;"><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position: relative; height: 874px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day29"><div><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day30 fc-state-highlight fc-today"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day31"><div><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day32"><div><div class="fc-day-number">31</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day33 fc-other-month"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day34 fc-last fc-other-month"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr><tr class="fc-week5 fc-last"><td class="fc-sun fc-widget-content fc-day35 fc-first fc-other-month"><div style="min-height: 73px;"><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-mon fc-widget-content fc-day36 fc-other-month"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-tue fc-widget-content fc-day37 fc-other-month"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-wed fc-widget-content fc-day38 fc-other-month"><div><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-thu fc-widget-content fc-day39 fc-other-month"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-fri fc-widget-content fc-day40 fc-other-month"><div><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td><td class="fc-sat fc-widget-content fc-day41 fc-last fc-other-month"><div><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></div></td></tr></tbody></table><div style="position:absolute;z-index:8;top:0;left:0"><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 332px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">12:00 AM</span><span class="fc-event-title">Bern Dibner Library of Science and Technology</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 332px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">12:00 AM</span><span class="fc-event-title">American Tract Society Building</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 396px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">12:00 AM</span><span class="fc-event-title">American Tract Society Building</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 412px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">7:30 AM</span><span class="fc-event-title">Morning Fitness at Fort Tryon Park</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 460px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">12:00 AM</span><span class="fc-event-title">Mount Carmel - Saint Benedicta School</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 476px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">8:00 AM</span><span class="fc-event-title">American Tract Society Building</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 540px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">12:00 AM</span><span class="fc-event-title">ELITE PASTRIES CAFE</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 540px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">8:00 AM</span><span class="fc-event-title">PIZZA HUT</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 604px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">12:00 AM</span><span class="fc-event-title">ERAWAN THAI CUISINE</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 574px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">Wave Hill Winter Workspace: Nature Through Glass: Snow-Globe Jars</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 700px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">Tropical Paradise at The New York Botanical Garden</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 653px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">The Wild Garden: Discovering Central Park Woodlands Exhibit</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 795px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">Tropical Paradise at The New York Botanical Garden</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 748px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">Woodland Discovery Kit in Central Park</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 890px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">Tropical Paradise at The New York Botanical Garden</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 267px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 812px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">11:00 AM</span><span class="fc-event-title">Greenbelt Peepers</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 985px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:00 AM</span><span class="fc-event-title">Wave Hill Winter Workspace: Nature Through Glass: Snow-Globe Jars</span></div></div><div class="fc-event fc-event-skin fc-event-hori fc-corner-left fc-corner-right" style="position: absolute; z-index: 8; left: 179px; background-color: rgb(0, 171, 220); border-color: rgb(0, 171, 220); width: 83px; top: 1111px;"><div class="fc-event-inner fc-event-skin" style="background-color:#00abdc;border-color:#00abdc"><span class="fc-event-time">10:30 AM</span><span class="fc-event-title">Arts,  Culture &amp; Fun: Soul Food Junkies Film Screening</span></div></div></div></div></div></div>
+<span id="event_main">Processing...</span>  
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+   
+
+<span id="modalholder">
+<!--Create Event Modal-->
+    <div id="CreateEvent" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div id="modal-event">
+       <div class="modal-header">
+        <button type="button" id="done_button2" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 id="myModalLabel">Create an Event</h2>
+        <div id="CreateEventErrors"></div>
+       </div> 
+        <div class="modal-body" style="overflow: inherit">
+            <div class="eventForm">
+              <input class="squareCorners" placeholder="Event Title" name="summary" id="summary" type="text">
+              <input class="squareCorners" placeholder="Location (Optional)" name="location" id="location" type="text">
+              <input class="squareCorners" placeholder="City (Optional)" name="city" id="city" type="text">
+              <input class="squareCorners" placeholder="State" name="state" id="state" type="text">
+              <input class="squareCorners hasDatepicker" placeholder="Event Date" name="startdate" id="datepicker3" type="text">             
+              <input class="squareCorners hasDatepicker" placeholder="Start Time (Optional)" name="starttime" id="timepicker3" type="text">
+              <input class="squareCorners hasDatepicker" placeholder="End Time (Optional)" name="endtime" id="timepicker2" type="text">
+      <div class="breakline"></div>            		
+      <select data-placeholder="Invite friends to your event" class="chzn-select chzn-done" multiple="multiple" style="width: 250px; display: none;" name="friendadd" id="friendadd">
+			            	    <option value="5@1.com"> five</option> 		
+      					            	    <option value="4@1.com"> four</option> 		
+      					            	    <option value="1@1.com"> one</option> 		
+      					            	    <option value="3@1.com"> three</option> 		
+      					            	    <option value="2@1.com"> two</option> 		
+      							</select><div title="" style="width: 272px;" class="chzn-container chzn-container-multi" id="friendadd_chzn"><ul class="chzn-choices"><li class="search-field"><input value="Invite friends to your event" class="default" autocomplete="off" style="width: 222px;" type="text"></li></ul><div class="chzn-drop" style="left: -9000px; width: 270px; top: 0px;"><ul class="chzn-results"><li id="friendadd_chzn_o_0" class="active-result" style=""> five</li><li id="friendadd_chzn_o_1" class="active-result" style=""> four</li><li id="friendadd_chzn_o_2" class="active-result" style=""> one</li><li id="friendadd_chzn_o_3" class="active-result" style=""> three</li><li id="friendadd_chzn_o_4" class="active-result" style=""> two</li></ul></div></div><br>
+          <!--               <input class="span4 squareCorners" type="text" placeholder="Invite your friends">
+ -->
+
+              <a id="add_button" data-target="#add_emailModal" style="cursor:pointer;" data-toggle="modal">Via Email</a>
+              <textarea class="squareCorners" rows="3" id="description" type="text" placeholder="Details"></textarea>
+            </div>
+		<input class="idbusiness" name="idbusiness" value="" type="hidden">
+		<input class="idplace" name="idplace" value="" type="hidden">
+<input value="Create Event" onclick="createevent()" type="button">
+<!--          <button class="btn btn-blue btn-large span5">Create Event!</button>  --> 
+       </div>
+       <div class="modal-footer"> 
+      </div>
+</div>
+<!--Side Bar Info-->    
+
+    <div id="emailModal">
+      <div class="emailheader">
+        <h4 style="text-align:center;">Add Friend Via Email</h4>
+          <div class="breakline"></div>
+      </div>
+<div id="emailerrormsg"></div>
+      <div class="modal-body">
+          <input class="squareCorners" id="emailfullname" placeholder="Add Name" type="text"><span id="erremailname"></span>
+          <input class="squareCorners" id="emailaddress" placeholder="Add Email" type="text"><span id="erremailaddress"></span>
+          <button style="padding:4px 35px 4px 35px;" class="btn btn-blue" onclick="addemail()">Add Friend</button>  
+          <button id="done_button" style="float:right;" class="btn btn-blue">Done</button>   
+        <div class="friends_module">
+			          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("5@1.com")'>×</button>
+            <p>five<br>5@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("4@1.com")'>×</button>
+            <p>four<br>4@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("1@1.com")'>×</button>
+            <p>one<br>1@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("3@1.com")'>×</button>
+            <p>three<br>3@1.com</p>
+          </div>
+      		          <div class=" alert Friends">
+            <button type="button" class="close" data-dismiss="alert" onclick='removeemail("2@1.com")'>×</button>
+            <p>two<br>2@1.com</p>
+          </div>
+      		 
+        </div>
+      </div>
+    </div> 
+
+    </div>   
+</span>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		opencreateevent(Array, 0);
+	    $(function () {
+	        $('#nav-pill_box a[href="#home"]').tab('show');
+	      });
+	      	});
+
+$("#calendarButton").click(function(){
+    $("#event_main").hide();
+    $("#calendar").show();
+  });
+  
+
+
+</script>
+<!-- Footer -->
+  <div class="footer">
+    <p>Copyright Gathering Up Ltd. All rights reserved. Proudly made in New York City!</p>  
+    <p>
+      <a href="http://twitter.com/">Follow Us on Twitter</a> | 
+      <a href="http://facebook.com/">Follow Us on Facebook</a><br>
+    </p> 
+    <p>  
+      <a href="http://gatheringup.com/terms.html">Terms of Use</a>  |  
+      <a href="http://gatheringup.com/Privacy.html">Privacy Policy</a> | 
+      <a href="http://gatheringup.com/Contact.html">Contact Us</a>
+    </p>  
+  </div>  
+
+<!--Register Modal-->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header registerModal">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 id="myModalLabel">Register with GatheringUP!</h2>
+        
+              <div class="facebookbg">
+              <a href="" class="facebookurl"><h3>
+        <img style="padding-right: 15px;" src="Gathering%20UP_files/facebook.png" alt="facebook">REGISTER WITH FACEBOOK</h3>
+        </a>
+        </div>
+        <div class="breakline"></div>
+      </div>
+      <div id="RegistrationErrors"></div>
+        <div class="modal-body">
+            <form id="registerform" action="#" class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="inputFirstName">First Name</label>
+                <div class="controls">
+                  <input name="firstname" id="firstname" class="squareCorners" placeholder="First Name" type="text">
+                  <b id="errfirstname"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">Last Name</label>
+                <div class="controls">
+                  <input name="lastname" id="lastname" class="squareCorners" placeholder="Last Name" type="text">
+                <b id="errlastname"></b>
+                </div>
+              </div>        
+                  <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                  <input name="email" id="regemail" class="squareCorners" placeholder="Email" type="text">
+                  <b id="erremail"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputPassword">Create Password</label>
+                              <p class="helper">*At least one number &amp; one capital letter</p> 
+                <div class="controls">
+                  <input name="password" id="regpassword" class="squareCorners" placeholder="Min 8 Characters" type="password">
+<b id="errpassword"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputConfirmPassword">Confirm Password</label>
+                <div class="controls">
+                  <input name="passwordconf" id="regpasswordconf" class="squareCorners" placeholder="Confirm Password" type="password">
+<b id="errpasswordconf"></b>
+                </div>
+              </div>     
+              <div class="control-group">
+                <div class="controls">
+                  <div id="captcha"><img src="Gathering%20UP_files/captcha.jpg"></div>
+                </div>
+              </div>   
+              <div class="control-group">
+                <label class="control-label" for="inputConfirmPassword">Enter Above</label>
+                <div class="controls">
+                  <input name="norobotcode" id="robotdistorter" class="squareCorners" placeholder="Enter Above" type="password">
+                  <b id="errrobotdistorter"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <button type="button" value="Sign me up" class="btn btn-blue btn-large" onclick="register()">Register</button>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>   
+
+    <!--Sign Up Modal-->
+    <div id="Signin_Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header registerModal">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 id="myModalLabel">Sign In!</h2>
+      </div>
+        <div class="breakline"></div>       
+        <div class="modal-body">
+          <p>Don't have an account? &nbsp;<a href="javascript:void(0);" onclick="registerpopup('')">Register Here!</a></p>
+            <form id="loginform" action="#" class="form-horizontal">
+            
+            		<input id="redirect" name="redirect" value="" type="hidden">
+					<input class="bbookmark" name="bbookmark" value="" type="hidden">
+					<input class="pbookmark" name="pbookmark" value="" type="hidden">
+					<input class="ebookmark" name="ebookmark" value="" type="hidden">
+              <div class="SignInField_m">
+              <div class="facebookbg">
+              <a href="" class="facebookurl">
+                    <img style="height:30px;width:auto;padding-right:5px;" src="Gathering%20UP_files/facebook.png" alt="facebook">Sign In with Facebook
+                 </a>
+              </div>
+        <div style="margin-top:20px;" class="breakline"></div>                 
+              </div>
+            	<div id="LoginErrors"></div>
+                <div class="SignInField_m">
+                    <input id="poploginemail" name="email" style="width:256px;" class="squareCorners" placeholder="Email" type="text">
+                </div>
+                <div class="SignInField_m">
+                    <input id="poploginpasswd" name="password" style="width:256px;" class="squareCorners" placeholder="Password" type="password">
+                </div>
+                <div class="SignInField_m">
+                    <a style="cursor:pointer;" data-target="#forgotModal" data-toggle="modal">Forgot Your Password?</a>
+                    <label class="checkbox">
+                    <input type="checkbox">Remember me
+                    </label>
+                        <button type="button" onclick="login()" class="btn btn-blue btn-large" style="font-weight:bold;width:100%;margin-top:10px;">Sign In!</button>
+                      </div>
+                  </form> 
+               </div>
+            </div> 
+
+<!--Forgot Password Modal-->
+    <div id="forgotModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>        
+        <h2 id="myModalLabel">Forgot Password</h2>
+      </div>
+      <div class="breakline"></div>
+      <div style="padding: 0px 35px 32px;" class="modal-body">
+        <h4>Enter you email address below to reset your password</h4>
+        <input style="padding-right:71px;" class="form-large" placeholder="Email Address" type="text">
+        <button style="padding:15px 33px 15px 33px;" type="submit" class="btn btn-blue btn-large">Reset Your Password!</button>
+      </div>
+    </div>    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--     <script src="js/jquery.js"></script> -->
+    <script src="Gathering%20UP_files/bootstrap-transition.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-alert.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-modal.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-dropdown.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-scrollspy.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-tab.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-tooltip.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-popover.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-button.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-collapse.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-carousel.js"></script>
+    <script src="Gathering%20UP_files/bootstrap-typeahead.js"></script>
+
+<!--Carousel Javascript-->    
+    <script type="text/javascript"> 
+	$('.dropdown-toggle ul.dropdown-menu form.form-horizontal, div.SignInField').click(function(e) {
+		e.stopPropagation();
+	});
+    
+      $('.carousel').carousel({
+        interval: 5000
+      });
+    </script>
+  
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

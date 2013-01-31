@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+	    <title>Events</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+    <!-- Le styles -->
+	    <link href="Gathering%20UP_files/bootstrap.css" rel="stylesheet">
+	    <style type="text/css">
+	      body {
+	        padding-top: 60px;
+	        padding-bottom: 0px;
+	      }
+    	</style>
+	    <link href="Gathering%20UP_files/bootstrap-responsive.css" rel="stylesheet">
+      <link rel="Stylesheet" type="text/css" href="Gathering%20UP_files/search.css">
+      <link href="Gathering%20UP_files/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="Gathering%20UP_files/jquery-ui.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://gatheringup.com/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://gatheringup.com/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://gatheringup.com/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="http://gatheringup.com/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="http://gatheringup.com/ico/favicon.png">
+<!-- Google Fonts -->
+      <link href="Gathering%20UP_files/css.css" rel="stylesheet" type="text/css">
+      <link href="Gathering%20UP_files/css_002.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="Gathering%20UP_files/jquery.js"></script>
+<script type="text/javascript" src="Gathering%20UP_files/jquery-ui.js"></script>
+<script type="text/javascript" src="Gathering%20UP_files/underscore-min.js"></script>
+<script type="text/javascript" src="Gathering%20UP_files/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="Gathering%20UP_files/gatheringup-event.js"></script>
+<script type="text/javascript" src="Gathering%20UP_files/gatheringup-registration.js"></script>
+
+
+</head>
+
+<body>
+    <div class="wrapper"> <!-- Wrapper --><!-- Header + Navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="top-stripe"></div>
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="http://gatheringup.com/">GatheringUP</a>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li><a href="http://gatheringup.com/Dining">Dining</a></li>
+                  <li><a href="http://gatheringup.com/Places">Places</a></li>
+                  <li><a href="http://gatheringup.com/Events">Events</a></li>
+                                 <li><a href="javascript:void(0);" onclick="loginpopup('/datebook')">Datebook</a></li>
+                              </ul>
+                             <form class="navbar-form pull-right form-horizontal" id="loginsideform" action="javascript:void(0);">
+                <a href="#myModal" type="button" class="btn-menu" data-toggle="modal">Register</a>
+                <a class="dropdown-toggle btn-menu" data-toggle="dropdown" href="javascript:void(0);">Sign In</a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <div id="SideDropLoginErrors"></div>
+                      <div class="SignInField">
+                      <div class="facebookbg">
+                        <a href="https://www.facebook.com/dialog/oauth?client_id=444845832200364&amp;redirect_uri=http%3A%2F%2Fwww.gatheringup.com%2Fuser%2Ffacebook&amp;state=e642fa3d40301c4126213273869119b9" class="facebookurl">
+                          <img style="height:30px;width:auto;padding-right:5px;" src="Gathering%20UP_files/facebook.png" alt="facebook">Sign In with Facebook
+                        </a>
+                        </div>
+                      </div>
+                      <li class="divider"></li>
+                      <div class="SignInField">
+                        <input id="droploginemail" name="email" class="squareCorners" placeholder="Email" type="text">
+                      </div>
+                      <div class="SignInField">
+                        <input id="droploginpassword" name="password" class="squareCorners" placeholder="Password" type="password">
+                      </div>
+                      <div class="SignInField">
+                        <a style="cursor:pointer;" data-target="#forgotModal" data-toggle="modal">Forgot Your Password?</a>
+                        <label class="checkbox">
+                          <input type="checkbox">Remember me
+                        </label>
+                        <button type="submit" class="btn btn-blue pull-right" style="font-weight:bold;" onclick="loginsidedrop()">Sign In!</button>
+                      </div>
+              
+                </ul>
+              </form>
+                             </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div><script type="text/javascript">
+//var bookmarks={};
+var bookmarks = {};
+		
+</script>
+
+<div class="container"> <!-- Container -->
+  <div class="row">
+    <div class="sideBar span3">
+        <h2>Calendar</h2>
+        <div class="hasDatepicker" id="datepicker"><div style="display: block;" class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" onclick="DP_jQuery_1359586459941.datepicker._adjustDate('#datepicker', +1, 'M');" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">January</span>&nbsp;<span class="ui-datepicker-year">2013</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">22</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">23</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">24</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">25</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">26</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">27</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" onclick="DP_jQuery_1359586459941.datepicker._selectDay('#datepicker',0,2013, this);return false;"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">30</a></td><td class=" " onclick="DP_jQuery_1359586459941.datepicker._selectDay('#datepicker',0,2013, this);return false;"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></div>
+          <h2>Search Filter</h2>
+              <div class="EventSearchFilter">
+                  <table class="table table-hover table-bordered">
+                    <tbody>
+                      <tr>
+                        <td><h4><a href="http://gatheringup.com/events">Anytime</a></h4></td>
+                      </tr> 
+                      <tr>
+                        <td><h4><a href="http://gatheringup.com/events/evenings">Evenings</a></h4></td>
+                      </tr>
+                      <tr>
+                        <td><h4><a href="http://gatheringup.com/events/weekend">Weekends</a></h4></td>
+                      </tr>
+                      <tr>
+                        <td><h4><a href="http://gatheringup.com/events/advancedsearch">Advance Search </a></h4></td>
+                      </tr>   
+                     </tbody>    
+                  </table>
+              </div>
+          <p>
+            <a style="width:230px;" class="btn btn-large btn-blue">Submit Your Events</a>
+          </p>
+    </div>
+
+    <div class="eventBody span8 offset1">
+
+
+
+      <div class="row">
+        <div class="span6"><h2>Wednesday January 30, 2013</h2> </div>
+        <div class="span2"><h2 class="searchFilter pull-right"></h2> </div>
+      </div>
+			<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">30</div></div>
+<div class="eventtitle" name="5083">
+<b>Citi Pond Music Nights</b><br>
+	Wednesday January 30, 2013 07:00 PM - 09:00 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Citi Pond at Bryant Park (in Bryant Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> DJs from your favorite radio stations spin turntables live,  while 
+you take a spin at Citi Pond! Wednesday evenings in January and 
+February,  7-9pm. 1/9: Top 40 - Z100 100.3 DJ 1/16: R&amp;B - Power 
+105.1DJ 1/23: Dance Party Mix - KTU 103.5 DJ 1/30: Live Jazz by Jazz at 
+Lincoln Center 2/13: Love Songs - Lite FM 106.7 DJ 2/20: Classic Rock - 
+Q104.3 DJ </p>
+<!-- 
+<a href="/event/recommend?event=5083"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5083');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5083')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+      <div class="row">
+        <div class="span6"><h2>Thursday January 31, 2013</h2> </div>
+        <div class="span2"><h2 class="searchFilter pull-right"></h2> </div>
+      </div>
+			<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5084">
+<b>Morning Fitness at Fort Tryon Park</b><br>
+	Thursday January 31, 2013 07:30 AM - 08:30 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Heather Garden (in Fort Tryon Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Come to Fort Tryon Park and try something new! Join us on Saturdays,
+  Tuesday and Thursday mornings for one hour of walking,  stretching,  
+and strengthening exercises. All of our fitness programs are free,  led 
+by trained professionals,  and suitable for all levels. Wear comfortable
+ clothing and bring water. Rain and weather / air advisory cancels. 
+Fitness programs are cancelled if the weather is lower than 20 degrees .
+ </p>
+<!-- 
+<a href="/event/recommend?event=5084"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5084');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5084')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5085">
+<b>The Wild Garden: Discovering Central Park Woodlands Exhibit</b><br>
+	Thursday January 31, 2013 10:00 AM - 05:00 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Charles A. Dana Discovery Center (in Central Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Use this hands-on exhibit to illuminate the history,  ecology,  and 
+management of the woodlands and learn why these landscapes are so 
+essential to the purpose of Central Park. The exhibit includes a digital
+ interactive app highlighting historic photos and revealing hidden 
+features. Exhibit introductions are available by appointment for groups 
+of 10 or more; call 212-860-1370 for more information. </p>
+<!-- 
+<a href="/event/recommend?event=5085"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5085');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5085')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5086">
+<b>Woodland Discovery Kit in Central Park</b><br>
+	Thursday January 31, 2013 10:00 AM - 05:00 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Charles A. Dana Discovery Center (in Central Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Visit The Wild Garden: Discovering Central Park Woodlands exhibit 
+and start exploring the North Woods on your own by borrowing a North 
+Woods Discovery Kit stocked with binoculars,  a hand lens,  and 
+flora/fauna guides. Accompanying adult with valid ID required. Purchase 
+an optional Discovery Journal for $2 for a one-of-a-kind woodland 
+adventure. Recommended for ages 8 – 12. </p>
+<!-- 
+<a href="/event/recommend?event=5086"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5086');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5086')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5087">
+<b>Cranio-Sacral Relaxation</b><br>
+	Thursday January 31, 2013 10:00 AM - 11:00 AM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Poe Park Visitor Center (in Poe Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Craniosacral therapy and relaxation is a deeply relaxing technique, 
+ somewhat like yoga,  that makes you feel as though you are floating on 
+water. You may experience yourself drifting in and out of sleep during 
+the gentle and quiet sessions. You will gain a deeper sense of 
+well-being and relaxation,  with a better understanding of your body and
+ how it feels. If you suffer migraines,  back or neck pain,  the 
+instructor will advice you on the specific technique to alleviate the 
+area of concern. Mats and materials are provided. Come in loose and 
+comfortable pants and clothing. Most people remove their shoes. Get 
+ready to have an amazing experience. This is a very popular class. </p>
+<!-- 
+<a href="/event/recommend?event=5087"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5087');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5087')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5088">
+<b>Greenbelt Tree Tots</b><br>
+	Thursday January 31, 2013 10:00 AM - 10:45 AM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Greenbelt Nature Center (in Blood Root Valley)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p>Join us for a dynamic exploration of the wonders of the forest. 
+Through hands-on activities,  observations,  finger plays,  games,  and 
+stories,  children will become familiar with the sights and sounds of 
+the forest. The program will take place indoors and ouddors [weather 
+permitting] for 3 and 4 year olds and their caregiver.</p>
+<!-- 
+<a href="/event/recommend?event=5088"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5088');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5088')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5089">
+<b>Tropical Paradise at The New York Botanical Garden</b><br>
+	Thursday January 31, 2013 10:00 AM - 02:00 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>The New York Botanical Garden<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> From January 19 through February 24,  visitors to The New York 
+Botanical Garden this winter can escape to "Tropical Paradise," a 
+showcase of the Enid A. Haupt Conservatory’s permanent collection of 
+tropical trees,  flowers,  and foliage,  including orange-yellow 
+crotons,  fuschia bromeliads,  and rosy-red hibiscus. Through 
+self-guided strolls,  use of a virtual smart phone tour,  or 
+participation in docent-led tours of the Conservatory offered daily at 
+12:30 p.m.,  visitors can encounter many surprises in the largest 
+Victorian-style glasshouse in the country. Visitors can also enjoy a 
+display of tropical photos from the International Garden Photographer of
+ the Year competition and partake in photography lessons on Sundays. 
+Children can participate in a scavenger hunt that begins in the 
+Conservatory and continues in the Everett Children’s Adventure Garden. </p>
+<!-- 
+<a href="/event/recommend?event=5089"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5089');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5089')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5090">
+<b>Views From the Past</b><br>
+	Thursday January 31, 2013 12:30 PM - 01:30 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Outside the Dairy Gift Shop (in Central Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Imagine living as a 19th century New Yorker taking a journey through
+ Central Park. Along the way,  you will learn about the Park's history 
+and hear how its designers,  Frederick Law Olmsted and Calvert Vaux,  
+struggled to turn their visions into our reality. Groups of seven or 
+more people should call (212) 360-2726 or email tours@centralparknyc.org
+ to schedule a custom tour. Accessibility level: Easy to negotiate; 
+paths and few stairs - mostly accessible to people with disabilities . </p>
+<!-- 
+<a href="/event/recommend?event=5090"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5090');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5090')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+<div class="eventmain">
+<div class="boxdate">January			<div class="boxday">31</div></div>
+<div class="eventtitle" name="5091">
+<b>Exhibit Opening: Famous (Indian) Battles of the Muhheakantuck</b><br>
+	Thursday January 31, 2013 06:00 PM - 08:00 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Morris-Jumel Mansion (in Roger Morris Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Join us for the opening of our new exhibition “Famous (Indian) 
+Battles of the Muhheakantuck , ” an exhibition by Jason Lujan. The event
+ is FREE and light refreshments will be served,  please call 
+212-923-8008 to reserve a place. Famous (Indian) Battles of the 
+Muhheakantuck by Jason Lujan Muhheakantuck,  a Lenape word meaning 
+"river that flows both ways," was the Indigenous name for what is now 
+known as the Hudson River. Artist Jason Lujan presents ten prints based 
+on 19th century,  hand-tinted postcards and feudal Japanese scenic maps 
+that examine the colonization of the Hudson River Valley. The series 
+frames the region's contention for land and resources using an 
+uncharacteristic vocabulary. Jason Lujan is of Chiricahua Apache 
+background and has lived in New York City since 2001. He has been 
+included in multiple solo and group exhibitions,  including the Kentler 
+International Drawing Space,  Exit Art,  Museum of Contemporary Native 
+Art in Santa Fe,  and Museo Nacional de Culturas Populares in Mexico 
+City. Jason's artwork is invested in language and motif to create a 
+hybridization of traditional and contemporary elements seeking to 
+advance an exploration between dialogue and styles that are not limited 
+to their historical definitions. </p>
+<!-- 
+<a href="/event/recommend?event=5091"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5091');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5091')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+      <div class="row">
+        <div class="span6"><h2>Friday February 1, 2013</h2> </div>
+        <div class="span2"><h2 class="searchFilter pull-right"></h2> </div>
+      </div>
+			<div class="eventmain">
+<div class="boxdate">February			<div class="boxday">1</div></div>
+<div class="eventtitle" name="5092">
+<b>The Wild Garden: Discovering Central Park Woodlands Exhibit</b><br>
+	Friday February 1, 2013 10:00 AM - 05:00 PM<img src="Gathering%20UP_files/left_arrow.png" style="float: right" id="eventexpand" title="Expand">
+<br>Charles A. Dana Discovery Center (in Central Park)<div class="padding"></div>
+</div>
+<div class="eventbody">
+<p> Use this hands-on exhibit to illuminate the history,  ecology,  and 
+management of the woodlands and learn why these landscapes are so 
+essential to the purpose of Central Park. The exhibit includes a digital
+ interactive app highlighting historic photos and revealing hidden 
+features. Exhibit introductions are available by appointment for groups 
+of 10 or more; call 212-860-1370 for more information. </p>
+<!-- 
+<a href="/event/recommend?event=5092"><img src="/images/bookmark.png" width="16" align="bottom"> Recommend</a> 
+-  -->
+
+<a href="javascript:void(0);" onclick="eventbookmarklogin('5092');"><img src="Gathering%20UP_files/gtk-bookmark.png">Bookmark</a> |
+
+<a href="javascript:void(0);" onclick="loginpopup('/datebook?events=5092')">
+<img src="Gathering%20UP_files/gtk-save.png" align="bottom"> Save event</a>
+</div>
+</div>
+
+<div class="pagination ">
+<table>
+<tbody><tr>
+<td width="70">Previous</td><td width="20"><b>1</b></td><td width="20"><a href="http://gatheringup.com/events?page=2">2</a></td> <td width="20"><a href="http://gatheringup.com/events?page=3">3</a></td> <td width="20"><a href="http://gatheringup.com/events?page=4">4</a></td> <td width="20"><a href="http://gatheringup.com/events?page=5">5</a></td> <td width="20"><a href="http://gatheringup.com/events?page=6">6</a></td> <td width="20"><b>...</b></td><td width="20"><a href="http://gatheringup.com/events?page=24">24</a></td> <td width="70"><a href="http://gatheringup.com/events?page=2">Next</a></td> </tr>
+</tbody></table>
+</div>
+</div>
+</div></div>
+
+<!-- Footer -->
+  <div class="footer">
+    <p>Copyright Gathering Up Ltd. All rights reserved. Proudly made in New York City!</p>  
+    <p>
+      <a href="http://twitter.com/">Follow Us on Twitter</a> | 
+      <a href="http://facebook.com/">Follow Us on Facebook</a><br>
+    </p> 
+    <p>  
+      <a href="http://gatheringup.com/terms.html">Terms of Use</a>  |  
+      <a href="http://gatheringup.com/Privacy.html">Privacy Policy</a> | 
+      <a href="http://gatheringup.com/Contact.html">Contact Us</a>
+    </p>  
+  </div>  
+
+<!--Register Modal-->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header registerModal">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 id="myModalLabel">Register with GatheringUP!</h2>
+        
+              <div class="facebookbg">
+              <a href="https://www.facebook.com/dialog/oauth?client_id=444845832200364&amp;redirect_uri=http%3A%2F%2Fwww.gatheringup.com%2Fuser%2Ffacebook&amp;state=e642fa3d40301c4126213273869119b9" class="facebookurl"><h3>
+        <img style="padding-right: 15px;" src="Gathering%20UP_files/facebook.png" alt="facebook">REGISTER WITH FACEBOOK</h3>
+        </a>
+        </div>
+        <div class="breakline"></div>
+      </div>
+      <div id="RegistrationErrors"></div>
+        <div class="modal-body">
+            <form id="registerform" action="#" class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="inputFirstName">First Name</label>
+                <div class="controls">
+                  <input name="firstname" id="firstname" class="squareCorners" placeholder="First Name" type="text">
+                  <b id="errfirstname"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">Last Name</label>
+                <div class="controls">
+                  <input name="lastname" id="lastname" class="squareCorners" placeholder="Last Name" type="text">
+                <b id="errlastname"></b>
+                </div>
+              </div>        
+                  <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                  <input name="email" id="regemail" class="squareCorners" placeholder="Email" type="text">
+                  <b id="erremail"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputPassword">Create Password</label>
+                              <p class="helper">*At least one number &amp; one capital letter</p> 
+                <div class="controls">
+                  <input name="password" id="regpassword" class="squareCorners" placeholder="Min 8 Characters" type="password">
+<b id="errpassword"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputConfirmPassword">Confirm Password</label>
+                <div class="controls">
+                  <input name="passwordconf" id="regpasswordconf" class="squareCorners" placeholder="Confirm Password" type="password">
+<b id="errpasswordconf"></b>
+                </div>
+              </div>     
+              <div class="control-group">
+                <div class="controls">
+                  <div id="captcha"><img src="Gathering%20UP_files/captcha.html"></div>
+                </div>
+              </div>   
+              <div class="control-group">
+                <label class="control-label" for="inputConfirmPassword">Enter Above</label>
+                <div class="controls">
+                  <input name="norobotcode" id="robotdistorter" class="squareCorners" placeholder="Enter Above" type="password">
+                  <b id="errrobotdistorter"></b>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <button type="button" value="Sign me up" class="btn btn-blue btn-large" onclick="register()">Register</button>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>   
+
+    <!--Sign Up Modal-->
+    <div id="Signin_Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header registerModal">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 id="myModalLabel">Sign In!</h2>
+      </div>
+        <div class="breakline"></div>       
+        <div class="modal-body">
+          <p>Don't have an account? &nbsp;<a href="javascript:void(0);" onclick="registerpopup('')">Register Here!</a></p>
+            <form id="loginform" action="#" class="form-horizontal">
+            
+            		<input id="redirect" name="redirect" value="" type="hidden">
+					<input class="bbookmark" name="bbookmark" value="" type="hidden">
+					<input class="pbookmark" name="pbookmark" value="" type="hidden">
+					<input class="ebookmark" name="ebookmark" value="" type="hidden">
+              <div class="SignInField_m">
+              <div class="facebookbg">
+              <a href="https://www.facebook.com/dialog/oauth?client_id=444845832200364&amp;redirect_uri=http%3A%2F%2Fwww.gatheringup.com%2Fuser%2Ffacebook&amp;state=e642fa3d40301c4126213273869119b9" class="facebookurl">
+                    <img style="height:30px;width:auto;padding-right:5px;" src="Gathering%20UP_files/facebook.png" alt="facebook">Sign In with Facebook
+                 </a>
+              </div>
+        <div style="margin-top:20px;" class="breakline"></div>                 
+              </div>
+            	<div id="LoginErrors"></div>
+                <div class="SignInField_m">
+                    <input id="poploginemail" name="email" style="width:256px;" class="squareCorners" placeholder="Email" type="text">
+                </div>
+                <div class="SignInField_m">
+                    <input id="poploginpasswd" name="password" style="width:256px;" class="squareCorners" placeholder="Password" type="password">
+                </div>
+                <div class="SignInField_m">
+                    <a style="cursor:pointer;" data-target="#forgotModal" data-toggle="modal">Forgot Your Password?</a>
+                    <label class="checkbox">
+                    <input type="checkbox">Remember me
+                    </label>
+                        <button type="button" onclick="login()" class="btn btn-blue btn-large" style="font-weight:bold;width:100%;margin-top:10px;">Sign In!</button>
+                      </div>
+                  </form> 
+               </div>
+            </div> 
+
+<!--Forgot Password Modal-->
+    <div id="forgotModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>        
+        <h2 id="myModalLabel">Forgot Password</h2>
+      </div>
+      <div class="breakline"></div>
+      <div style="padding: 0px 35px 32px;" class="modal-body">
+        <h4>Enter you email address below to reset your password</h4>
+        <input style="padding-right:71px;" class="form-large" placeholder="Email Address" type="text">
+        <button style="padding:15px 33px 15px 33px;" type="submit" class="btn btn-blue btn-large">Reset Your Password!</button>
+      </div>
+    </div>    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--     <script src="js/jquery.js"></script> -->
+    <script src="Gathering%20UP_files/bootstrap.js"></script>
+<!--     <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+ -->
+<!--Carousel Javascript-->    
+    <script type="text/javascript"> 
+	$('.dropdown-toggle ul.dropdown-menu form.form-horizontal, div.SignInField').click(function(e) {
+		e.stopPropagation();
+	});
+    
+      $('.carousel').carousel({
+        interval: 5000
+      });
+    </script>
+  
+
+</div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

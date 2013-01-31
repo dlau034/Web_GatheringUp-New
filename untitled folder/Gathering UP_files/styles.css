@@ -1153,6 +1153,20 @@ div.imagebox {
   -moz-border-radius-topright: 4px;
 }
 
+.chzn-container {
+	font-family: "ubuntu";
+	font-size: 1.0em;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	zoom: 1;
+}
+
+.chzn-container {
+	font-family: "ubuntu";
+}
+
 
 div#emailerrormsg {
 	text-align: center;
