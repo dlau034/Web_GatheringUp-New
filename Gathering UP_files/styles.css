@@ -6,6 +6,7 @@ body {
 	font-family: "Ubuntu", Helvetica, Arial, sans-serif;
 	color: #4D4D4D;
 	background-image: url("bg_grey.jpg");
+
 }
 
 h2 {
@@ -30,6 +31,40 @@ a:hover {
 form {
 	margin: 0px;
 }
+
+.customscroll ::-webkit-scrollbar{width:9px;height:9px;}
+.customscroll ::-webkit-scrollbar-button:start:decrement,.customscroll ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+.customscroll ::-webkit-scrollbar-track-piece{background-color:transparent;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+.customscroll ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#ccc;-webkit-border-radius:0px;}
+.customscroll ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#ccc;-webkit-border-radius:0px;}
+
+.namespanel {
+	border-left: 1px solid white;
+	-moz-box-shadow: -1px 0px 0px #e5e5e5;
+	-webkit-box-shadow: -1px 0px 0px #e5e5e5;
+	box-shadow: -1px 0px 0px #e5e5e5;
+	margin-bottom: 10px;
+	margin-left: -13px;
+	max-height: 620px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	width: 100px;
+	height: 100%;
+}
+
+.namespanel {
+  border-left: 1px solid white;
+
+  margin-bottom: 10px;
+}
+
+.attendstatus {
+  margin-left: 11px;
+  text-align: left;
+}
+
+
+
 
 .hero-unit {
 	background-image: url("/images/new_york_city.jpg"); 
@@ -144,8 +179,12 @@ form {
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th  {
-	  background-color: #f9f9f9;
-	  color: #222;
+	  background-color: #ECEFF5; /*#ECEFF5*/ /* #F2F4F8 */
+	  color: #111;
+ }
+
+ .table {
+ 	margin-bottom: 0px;
  }
 
  	/* Search.css Overrides */
@@ -554,13 +593,20 @@ div.grandcentral {
 }
 
 .yourBookmarks {
+	/*overflow: auto;*/
+/*	min-height: 480px;
+	max-height: 500px;	*/
+	min-height: 250px;
+	max-height: 450px;
 	overflow: auto;
-	min-height: 480px;
-	max-height: 500px;	
+	border: 1px solid #e5e5e5;
+	background-color: #e5e5e5;	
 }
 
 .eventbox > a {
-	font-weight: bold;
+	font-weight: normal;
+	color: #222;
+	font-size: 1.1em;
 }
 
 .eventbox > a:hover {
@@ -571,7 +617,22 @@ div.grandcentral {
 	min-height: 250px;
 	max-height: 450px;
 	overflow: auto;
-	margin-bottom:20px;
+	border: 1px solid #e5e5e5;
+	background-color: #e5e5e5;
+}
+
+.eventbox {
+	padding: 15px;
+	/*margin-bottom: 10px;*/
+	background-color: #f9f9f9;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #e5e5e5;	
+	border-collapse: collapse;
+}
+
+
+.eventbox:hover {
+	background-color: #A2DCF0;
 }
 
 .icon-chevron-right {
@@ -593,7 +654,8 @@ div.grandcentral {
 	border-radius: 0px;
 	background-color: #f9f9f9;
 	height: 510px;
-	/*padding-bottom: 10px;*/
+	padding: 15px;
+	margin-left: -327px;
 }
 
 .span5.squareCorners {
@@ -947,6 +1009,9 @@ div.ui-datepicker-header {
 	right: -250px;
 	border-left: 1px solid #ccc;
 	display:none;
+	padding: 15px;
+	margin-right: -31px;
+
 }
 
 #calendar {
@@ -1001,13 +1066,13 @@ div.ui-datepicker-header {
 	width: 270px;
 	background-color: white;
 }
+
 .table-bordered {
 	border-radius: 0px;
 	background-color: white;
 	border-collapse:collapse;
-
-
 }
+
 
 .fc-border-separate {
 	background-color: white;
@@ -1026,7 +1091,7 @@ div.ui-datepicker-header {
 	background-color: #f9f9f9;
 }
 
-/*Responsive Override*/
+/*Responsive Override
 
   .offset1 {
     /*margin-left: 130px;*/
@@ -1077,7 +1142,10 @@ div.ui-datepicker-header {
 	background-image: url("../gathering UP_files/notification_on.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	text-indent: -999px;
+	color: #E71B75;
+	font-size: 0.8em;
+	font-family: "ubuntu";
+	text-indent: -2px;
 }
 
 #note_off {
@@ -1225,11 +1293,6 @@ div#emailerrormsg {
 
 .message_entry{
 	min-height: 72px;
-}
-
-div.namespanel {
-	background-color: red;
-	border-left: 1px solid black;
 }
 
 
